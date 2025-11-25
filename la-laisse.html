@@ -9,7 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="la-laisse-page">
+
+    <!-- Musique de fond -->
+    <audio id="bg-music" autoplay loop>
+        <source src="mp3/iwbyd.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+    // Lancement de la musique au premier clic (navigateurs modernes)
+    document.addEventListener("click", () => {
+        const audio = document.getElementById("bg-music");
+        if (audio && audio.paused) {
+            audio.play().catch(() => {});
+        }
+    });
+    </script>
+
     <header class="main-header">
         <h1><a href="index.html">I Wanna Be Your Dog</a></h1>
         <p class="slogan">Flairer l'époque.</p>
@@ -25,11 +41,96 @@
     </nav>
 
     <main class="content">
+
+        <!-- Grande bannière avec Pierphil -->
+        <div class="hero-banner">
+            <img src="images/pierphil.png" alt="Pierphil - La Laisse">
+        </div>
+
         <article>
-            <h2>La Laisse <br><span style="font-size: 0.6em; color: #EAEAEA;">(Pouvoir, Technologie et Société)</span></h2>
-            <p><em>Exemple d'article :</em></p>
-            <h3>"TikTok : Le dressage algorithmique parfait ?"</h3>
-            <p style="margin-top: 2rem;">(Contenu à venir...)</p>
+            <div class="intro">
+                <p class="intro-text">
+                    Ici, on renifle l’époque.<br>
+                    On gratte. On mord.<br>
+                    On écrit depuis le sol, là où la vérité sent fort.
+                </p>
+            </div>
+
+            <div class="section-title">
+                <img src="images/pierphil.png" alt="Pierphil" class="title-image">
+                <h2>La Laisse <br><span style="font-size: 0.6em; color: #EAEAEA;">(Pouvoir, Technologie et Société)</span></h2>
+            </div>
+            
+            <h3 class="article-title">IA : la nouvelle pierre philosophale (ou juste une laisse plus brillante)</h3>
+
+            <p>L’alchimie rêvait de transformer le plomb en or. Aujourd’hui, on transforme des miettes de nos vies numériques en modèles “intelligents”. On a remplacé les chaudrons et les grimoires par des GPU surchauffés et des interfaces trop propres pour être honnêtes.</p>
+            
+            <p>Et pourtant, le fantasme est le même : créer quelque chose qui nous dépasse, qui nous transforme, qui nous promet plus que ce que la réalité nous offre.</p>
+            
+            <h4>L’ancienne magie : transmuter la matière</h4>
+            
+            <p>Les alchimistes étaient naïfs, mais honnêtes. Ils se brûlaient les doigts avec du mercure parce qu’ils croyaient, vraiment, que la matière avait un secret. Une fissure. Une faille à forcer.</p>
+            
+            <p>Ceux qui manipulent l’IA aujourd’hui ne sont pas si différents. Ils cherchent la même chose : une faille dans l’humain, un raccourci vers la puissance, un moyen d’échapper à la lourdeur du réel.</p>
+            
+            <p>La seule différence ? L’or a changé. Ce n’est plus un métal. C’est l’attention, les données, le contrôle.</p>
+            
+            <h4>La nouvelle magie : transmuter l’humain</h4>
+            
+            <p>L’IA ne transforme pas le monde. Elle nous transforme, nous. Doucement. Comme une laisse qui glisse autour du cou sans prévenir.</p>
+            
+            <p>On lui donne nos habitudes. Elle nous rend des prédictions. On lui donne nos goûts. Elle nous renvoie ce qu’on aurait déjà aimé. On lui donne nos visages. Elle s'entraîne.</p>
+            
+            <p>L’IA ne crée pas de l’or. Elle crée de la dépendance. Du confort. Et comme toutes les drogues efficaces, elle fait disparaître le monde extérieur pour le remplacer par une version optimisée, anesthésiée, digeste.</p>
+            
+            <p>Une transmutation du réel en feed.</p>
+            
+            <h4>La laisse</h4>
+            
+            <p>La pierre philosophale promettait la liberté. L’IA, elle, te promet qu’elle pense à ta place.</p>
+            
+            <p>Mais chaque recommandation fine, chaque prédiction parfaite, chaque sensation de “wow, ça me connaît mieux que moi-même” ajoute un nouveau maillon à la chaîne.</p>
+            
+            <p>Laisse premium. Cuir digital. Boucle ergonomique.</p>
+            
+            <p>Tu ne tires même plus dessus : elle anticipe tes mouvements.</p>
+            
+            <p>Le chien parfait n’a pas besoin d’être attaché. Il suffit qu’il croie l’être.</p>
+            
+            <h4>Qui tient le bout de la laisse ?</h4>
+            
+            <p>C’est ça la vraie question. Pas “l’IA est-elle dangereuse ?” Pas “va-t-elle remplacer l’homme ?”<br>
+            Mais : à qui profite la magie ?</p>
+            
+            <p>Qui contrôle la transformation ? Qui récolte l’or moderne — et qui joue le rôle du chien ?</p>
+            
+            <p>Parce que c’est toujours la même histoire : une promesse de liberté, un outil fascinant, puis la capture, puis le dressage.</p>
+            
+            <p>L’alchimie cherchait la vérité. L’IA cherche le marché.</p>
+            
+            <h4>La seule transmutation qui compte</h4>
+            
+            <p>La véritable pierre philosophale n’a jamais été un objet. C’était une attitude. Une insatisfaction brûlante. L’idée que le monde peut être fissuré, bricolé, réécrit.</p>
+            
+            <p>L’IA, elle, ne fissure rien. Elle polit. Elle adoucit. Elle simplifie.</p>
+            
+            <p>C’est un miroir qui nous renvoie notre reflet — mais plus docile, plus productif, plus prévisible.</p>
+            
+            <p>La pierre philosophale voulait libérer l’homme. L’IA veut l’optimiser.</p>
+            
+            <p>Entre les deux : une différence de philosophie. De courage. De sueur.</p>
+            
+            <h4>Alors, IA = pierre philosophale ?</h4>
+            
+            <p>Non.<br>
+            L’IA, c’est la laisse la plus sophistiquée jamais inventée.<br>
+            Une laisse dorée, brillante, flatteuse comme de l’or alchimique.</p>
+            
+            <p>Et comme toujours, la question n’est pas : “suis-je attaché ?”<br>
+            Mais : “qui tient l’autre bout ?”</p>
+
+            <!-- Signature de l'article -->
+            <p class="signature">— Écrit par <strong>Hassen Mokdad</strong></p>
         </article>
     </main>
 

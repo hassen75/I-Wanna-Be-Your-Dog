@@ -17,8 +17,32 @@ body {
     padding: 1rem;
 }
 
+/* --- HERO BANNER (La Laisse) --- */
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 30px;
+    filter: brightness(1.1);
+}
+
+/* --- SIGNATURE ARTICLE --- */
+.signature {
+    margin-top: 40px;
+    font-family: "Special Elite", monospace;
+    font-size: 1.1em;
+    opacity: 0.8;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
 /* --- TYPOGRAPHY --- */
-h1, h2, h3, .slogan {
+h1,
+h2,
+h3,
+.slogan {
     font-family: var(--font-title);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -53,11 +77,17 @@ a:hover {
 }
 
 /* --- LAYOUT & BORDERS (FANZINE STYLE) --- */
-.main-header, .main-nav, .content, .main-footer {
+.main-header,
+.main-nav,
+.content,
+.main-footer {
     border: 2px solid var(--border-color);
     padding: 1.5rem;
     margin: 1rem auto;
     max-width: 800px;
+    background-color: var(--main-bg);
+    position: relative;
+    z-index: 2; /* Pour que le contenu reste au-dessus du fond IA */
 }
 
 .main-header {
@@ -88,6 +118,7 @@ a:hover {
     letter-spacing: 0.1em;
     font-size: 1.2rem;
 }
+
 .main-nav a:hover {
     color: var(--accent-red);
     text-decoration: none;
@@ -98,6 +129,7 @@ a:hover {
     font-family: var(--font-title);
 }
 
+/* --- MANIFESTE (ACCUEIL) --- */
 .manifeste ul {
     list-style: none;
     padding-left: 1rem;
@@ -107,4 +139,82 @@ a:hover {
     padding-left: 1rem;
     border-left: 2px solid var(--accent-red);
     margin: 0.5rem 0;
+}
+
+/* --- ARTICLE INTRO --- */
+.intro {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- SECTION TITLE --- */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.title-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.section-title h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* --- ARTICLE CONTENT --- */
+h3.article-title {
+    font-size: 1.8rem;
+    color: var(--accent-red);
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.content article h4 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--main-text);
+    margin: 2rem 0 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content article p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* --- PAGE-SPECIFIC BACKGROUND (La Laisse) --- */
+body.la-laisse-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/IA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
 }
